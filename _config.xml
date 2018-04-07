@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configura>
+	<wallpaper_width>1366</wallpaper_width>
+	<wallpaper_height>768</wallpaper_height>
+	<wallpaper_dir>D:/Program/Python/python_wallpapers/wallpapers/</wallpaper_dir>
+	<wallpaper_out>D:/Program/Python/python_wallpapers/out_wallpapers/</wallpaper_out>
+</configura>
