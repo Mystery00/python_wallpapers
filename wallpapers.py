@@ -14,12 +14,16 @@ def get_xml_value(path, tag_name):
 
 
 BASE = os.getcwd()
-PDF_PATH = BASE + '\\assert\\code_calendar.pdf[{}]'  # PDF路径
-CONFIG_PATH = BASE + '\\_config.xml'  # 配置文件路径
+PDF_PATH = BASE + '/assert/code_calendar.pdf[{}]'  # PDF路径
+CONFIG_PATH = BASE + '/_config.xml'  # 配置文件路径
 WALLPAPERS_DIR = get_xml_value(CONFIG_PATH, 'wallpaper_dir')  # 壁纸目录
 OUTPUT_DIR = get_xml_value(CONFIG_PATH, 'wallpaper_out')  # 输出壁纸目录
 WALLPAPER_WIDTH = int(get_xml_value(CONFIG_PATH, 'wallpaper_width'))  # 壁纸最小宽度
 WALLPAPER_HEIGHT = int(get_xml_value(CONFIG_PATH, 'wallpaper_height'))  # 壁纸最小高度
+
+# 如果输出目录不存在，则创建
+if not os.path.isdir(OUTPUT_DIR):
+    os.makedirs(OUTPUT_DIR)
 
 PAGE_OFFSET_WEEK = 6  # PDF文档中星期开始页数
 PAGE_OFFSET_MONTH = 0  # PDF文档月数开始页数
